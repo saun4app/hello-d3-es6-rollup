@@ -39,8 +39,9 @@ or
 ```
 $ http-server ./build -p 3020
 ```
-View the page on `http://localhost:3020/`.
+View the page on `http://localhost:3020/`
 
+![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-rollup/master/demo-screen.png)
 
 ## Known Issues
 
