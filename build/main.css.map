@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","file":"main.css","sourcesContent":[".good-value {\n    color: DarkGreen;\n}\n\n.ok-value {\n    color: Orange;\n}"]}

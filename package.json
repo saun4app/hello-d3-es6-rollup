@@ -1,0 +1,48 @@
+{
+  "name": "seed-d3-es6-rollup",
+  "version": "0.0.1",
+  "description": "This is an example project to accompany a tutorial on using Rollup.",
+  "main": "build/js/main.min.js",
+  "scripts": {
+    "build": "gulp build",
+    "release": "gulp ugly",
+    "start": "http-server ./build -p 3020 --cors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/saun4app/seed-d3-es6-rollup.git"
+  },
+  "author": "Saun Shewanown <saun4app@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saun4app/seed-d3-es6-rollup.git/issues"
+  },
+  "homepage": "https://github.com/saun4app/seed-d3-es6-rollup#readme",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "latest",
+    "cssnano": "latest",
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-shell": "latest",
+    "gulp-sourcemaps": "latest",
+    "http-server": "latest",
+    "npm-run-all": "latest",
+    "postcss-cssnext": "latest",
+    "postcss-nested": "latest",
+    "postcss-simple-vars": "latest",
+    "rollup": "latest",
+    "rollup-plugin-babel": "latest",
+    "rollup-plugin-commonjs": "latest",
+    "rollup-plugin-eslint": "latest",
+    "rollup-plugin-json": "latest",
+    "rollup-plugin-node-globals": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-postcss": "latest",
+    "rollup-plugin-replace": "latest",
+    "rollup-plugin-uglify": "latest"
+  },
+  "dependencies": {
+    "d3": "^4.2.6"
+  }
+}
