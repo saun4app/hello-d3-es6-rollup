@@ -1,6 +1,6 @@
 # hello-d3-es6-rollup
 
-hello-d3-es6-rollup provides an example of using the following to display text on the screen:
+`hello-d3-es6-rollup` provides an example of using the following to display text on the screen:
 - `d3.js` (v4)
 - `es6` (`ES2015`)
 - `rollup.js`
