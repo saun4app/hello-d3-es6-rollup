@@ -211,43 +211,79 @@ var set = function set(object, property, value, receiver) {
   return value;
 };
 
-var D3Text = function () {
-    function D3Text() {
+var D3TextList = function () {
+    function D3TextList() {
         var param_obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-        classCallCheck(this, D3Text);
+        classCallCheck(this, D3TextList);
 
-        this.tag_id = param_obj.tag_id ? param_obj.tag_id : 'el_good_message';
-        this.class_str = param_obj.class_str ? param_obj.class_str : 'good-value';
+        this.set_value(param_obj);
+
+        return this;
     }
 
-    createClass(D3Text, [{
-        key: 'show_text',
-        value: function show_text() {
+    createClass(D3TextList, [{
+        key: 'append_item',
+        value: function append_item() {
             var param_obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-            var tag_id = param_obj.tag_id ? param_obj.tag_id : this.tag_id;
-            var result_text = param_obj.result_text ? param_obj.result_text : 'd3 es6 is good.';
-            var class_str = param_obj.class_str ? param_obj.class_str : this.class_str;
+            var self = this;
 
-            d3.select('#' + tag_id).selectAll('*').remove();
+            try {
+                this.set_value(param_obj);
 
-            d3.select('#' + tag_id).append('span').attr('class', class_str).text(result_text);
+                this.el_list.append('li').attr('class', self.el_item_class).text(self.el_item_text);
+            } catch (error) {
+                console.error('D3TextList::append_text() ' + error);
+            }
+
+            return this;
+        }
+    }, {
+        key: 'set_value',
+        value: function set_value() {
+            var param_obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+            this.el_container_id = param_obj.el_container_id ? param_obj.el_container_id : 'el_message_list';
+            this.el_list_class = param_obj.el_list_class ? param_obj.el_list_class : 'w3-ul w3-border';
+            this.el_item_class = param_obj.el_item_class ? param_obj.el_item_class : 'good-value';
+            this.el_item_text = param_obj.el_item_text ? param_obj.el_item_text : 'd3 es6 is good.';
+
+            this._set_el_list();
+
+            return this;
+        }
+    }, {
+        key: '_set_el_list',
+        value: function _set_el_list() {
+            var self = this;
+
+            if (!this.el_list) {
+                var container_id = '#' + this.el_container_id;
+                d3.select(container_id).selectAll('*').remove();
+
+                this.el_list = d3.select(container_id).append('ul').attr('class', self.el_list_class);
+            }
         }
     }]);
-    return D3Text;
+    return D3TextList;
 }();
 
-// default
-var good_obj = new D3Text();
-good_obj.show_text();
-
-// passing parameters
 var param_obj = {};
-param_obj.tag_id = 'el_ok_message';
-param_obj.class_str = 'ok-value';
-param_obj.result_text = 'd3 es6 is ok.';
+param_obj.el_container_id = 'el_message_list';
 
-var ok_obj = new D3Text();
-ok_obj.show_text(param_obj);
+var text_list_obj = new D3TextList();
+
+// default
+text_list_obj.append_item();
+
+//
+param_obj.el_item_class = 'ok-value';
+param_obj.el_item_text = 'd3 es6 is ok.';
+text_list_obj.append_item(param_obj);
+
+//
+param_obj.el_item_class = 'w3-red';
+param_obj.el_item_text = 'd3 es6 is not so good.';
+text_list_obj.append_item(param_obj);
 
 }(d3));

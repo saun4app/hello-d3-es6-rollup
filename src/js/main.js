@@ -1,15 +1,20 @@
-import {D3Text} from './lib/D3TextEs6';
+import {D3TextList} from './lib/D3TextEs6';
+
+let param_obj = {};
+param_obj.el_container_id = 'el_message_list';
+
+let text_list_obj = new D3TextList();
 
 // default
-let good_obj = new D3Text();
-good_obj.show_text();
+text_list_obj.append_item();
 
-// passing parameters
-let param_obj = {};
-param_obj.tag_id = 'el_ok_message';
-param_obj.class_str = 'ok-value';
-param_obj.result_text = 'd3 es6 is ok.';
+//
+param_obj.el_item_class = 'ok-value';
+param_obj.el_item_text = 'd3 es6 is ok.';
+text_list_obj.append_item(param_obj);
 
-let ok_obj = new D3Text();
-ok_obj.show_text(param_obj);
+//
+param_obj.el_item_class = 'w3-red';
+param_obj.el_item_text = 'd3 es6 is not so good.';
+text_list_obj.append_item(param_obj);
 
