@@ -1,4 +1,4 @@
-import {D3TextList} from './lib/D3TextEs6';
+import {D3TextList} from './lib/D3TextList';
 
 let param_obj = {};
 param_obj.el_container_id = 'el_message_list';

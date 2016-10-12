@@ -9,6 +9,7 @@ import rollup_uglify from 'rollup-plugin-uglify';
 
 
 // export var hello_src = '../hello-src/src';
+export var build_path = 'build';
 export var hello_src = 'src';
 export var js_src = [hello_src, 'js'].join('/');
 export var js_build = 'build/js';
