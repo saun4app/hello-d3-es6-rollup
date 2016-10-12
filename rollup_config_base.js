@@ -7,8 +7,6 @@ import rollup_json from 'rollup-plugin-json';
 import rollup_replace from 'rollup-plugin-replace';
 import rollup_uglify from 'rollup-plugin-uglify';
 
-
-// export var hello_src = '../hello-src/src';
 export var build_path = 'build';
 export var hello_src = 'src';
 export var js_src = [hello_src, 'js'].join('/');
@@ -40,10 +38,3 @@ export function get_plugin_array() {
 
     return plugin_array;
 }
-
-/*
- rollup_config_obj.plugins.push(rollup_replace({
- exclude: 'node_modules/**',
- ENV: JSON.stringify(process.env.NODE_ENV || 'development')
- }));
- */
