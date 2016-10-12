@@ -7,7 +7,9 @@
 - `gulp` (**with** `rollup.config.js`)
 
 ## Example
-![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-rollup/master/demo-screen.png)
+![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
+
+![View in browser](https://saun4app.github.io/hello-d3-es6-gulp-rollup/){:target="_blank"}
 
 ## Install
 ```
@@ -41,7 +43,9 @@ $ http-server ./build -p 3020
 ```
 View the page on `http://localhost:3020/`
 
-![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-rollup/master/demo-screen.png)
+![Demo screen](https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png)
+
+![View in browser](https://saun4app.github.io/hello-d3-es6-gulp-rollup/){:target="_blank"}
 
 ## Known Issues
 
