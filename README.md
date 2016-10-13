@@ -8,7 +8,7 @@
 
 ## Example
 <img src="https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png"
-	alt="Demo screen" onclick="window.open('(https://saun4app.github.io/hello-d3-es6-gulp-rollup', '_blank');" />
+	alt="Demo screen" onclick="window.open('(https://saun4app.github.io/hello-d3-es6-rollup', '_blank');" />
 
 ## Install
 ```
@@ -43,7 +43,7 @@ $ http-server ./build -p 3020
 View the page on `http://localhost:3020/`
 
 <img src="https://raw.github.com/saun4app/hello-d3-es6-gulp-rollup/master/demo-screen.png"
-	alt="Demo screen" onclick="window.open('(https://saun4app.github.io/hello-d3-es6-gulp-rollup', '_blank');" />
+	alt="Demo screen" onclick="window.open('(https://saun4app.github.io/hello-d3-es6-rollup', '_blank');" />
 
 ## Known Issues
 

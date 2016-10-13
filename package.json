@@ -24,6 +24,7 @@
     "gulp": "latest",
     "gulp-concat": "latest",
     "gulp-htmlmin": "latest",
+    "gulp-sequence": "^0.4.6",
     "gulp-shell": "latest",
     "gulp-sourcemaps": "latest",
     "http-server": "latest",
