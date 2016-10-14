@@ -1,4 +1,4 @@
-import * as d3 from 'd3';
+import { select } from 'd3-selection';
 
 export class D3TextList {
     constructor(param_obj = {}) {
@@ -42,9 +42,9 @@ export class D3TextList {
 
         this.el_list.selectAll('li')
             .on('mouseover', function () {
-                d3.select(this).classed(self.el_mouseover_class, true);
+                select(this).classed(self.el_mouseover_class, true);
             }).on('mouseout', function () {
-                d3.select(this).classed(self.el_mouseover_class, false);
+                select(this).classed(self.el_mouseover_class, false);
             });
     }
 
@@ -53,9 +53,9 @@ export class D3TextList {
 
         if (!(this.el_list)) {
             let container_id = '#' + this.el_container_id;
-            d3.select(container_id).selectAll('*').remove();
+            select(container_id).selectAll('*').remove();
 
-            this.el_list = d3.select(container_id)
+            this.el_list = select(container_id)
                 .append('ul')
                 .attr('class', self.el_list_class);
         }
